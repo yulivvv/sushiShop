@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', 'App\Http\Controllers\MainController@index');
+
+Route::get('/{category}', 'App\Http\Controllers\MainController@category');
+
+Route::get('/{sushirolls?}', 'App\Http\Controllers\MainController@sushirolls');
+// Route::get('/sets', 'App\Http\Controllers\MainController@sets');
+// Route::get('/pizzas', 'App\Http\Controllers\MainController@pizzas');
+// Route::get('/hotdishes', 'App\Http\Controllers\MainController@hotdishes');
+// Route::get('/drinks', 'App\Http\Controllers\MainController@drinks');
+
+
+
+
+
+
+
